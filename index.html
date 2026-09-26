@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SnapSearch 📸</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small local search interface for a fixed image metadata dataset.">
+  <title>Snapshot Search Prototype</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <h1>SnapSearch 📸</h1>
+  <main class="container">
+    <p class="eyebrow">Search interface prototype</p>
+    <h1>Snapshot Search</h1>
+    <p class="intro">Filter a small local dataset without an API key or network request.</p>
     <form id="search-form">
-      <input type="text" id="search-input" placeholder="Search images..." required />
-      <button type="submit">🔍</button>
+      <label for="search-input">Search the dataset</label>
+      <div class="search-row">
+        <input id="search-input" type="search" placeholder="Try “coast” or “architecture”" autocomplete="off">
+        <button type="submit">Search</button>
+      </div>
     </form>
-    <div id="results"></div>
-  </div>
-
-  <script src="script.js"></script>
+    <p id="result-summary" class="summary" role="status" aria-live="polite"></p>
+    <section id="results" class="results" aria-label="Search results"></section>
+  </main>
 </body>
 </html>
