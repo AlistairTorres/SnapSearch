@@ -1,11 +1,21 @@
 # Snapshot Search Prototype
 
-A small browser prototype for searching a fixed, local metadata dataset.
+A small local search interface for filtering a fixed metadata dataset and presenting useful results clearly.
 
-## Run
+## Highlights
 
-Open index.html in a modern browser. No API key, build step or network request is required.
+- Search across titles, categories and tags
+- Show result counts and a useful empty state
+- Keep the dataset local and predictable
+- Render result cards from structured records
+- Work without an API key or network request
 
-## Scope
+## Technical approach
 
-This project focuses on search form behaviour, filtering and result presentation. It deliberately uses a local snapshot instead of claiming to be a production image-search service.
+The project keeps the search model intentionally visible: a query is normalised, records are filtered, and the result view is rebuilt from the matching data. That makes the behaviour easy to inspect and extend.
+
+## Run locally
+
+Open index.html in a modern browser. No build step is required.
+
+This is a focused exercise in search interaction, filtering logic and information display.
